@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador de Prova - Teorema de Bayes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador de Prova com Bayes</h1>
+        <form method="POST">
+            <label>Chance de saber a resposta (ex: 0.6 para 60%):</label>
+            <input type="number" step="0.01" min="0" max="1" name="p_sabe" required>
+
+            <label>Número total de questões:</label>
+            <input type="number" name="num_questoes" min="1" required>
+
+            <label>Número de questões que deseja acertar:</label>
+            <input type="number" name="num_acertos" min="0" required>
+
+            <button type="submit">Calcular</button>
+        </form>
+
+        {% if resultado %}
+            <div class="resultado">
+                <h2>Resultado:</h2>
+                <p>Chance de acertar uma questão aleatória: <strong>{{ resultado.p_acertar_questao * 100 }}%</strong></p>
+                <p>Chance de acertar exatamente {{ request.form['num_acertos'] }} questões: <strong>{{ resultado.p_exatamente_k * 100 }}%</strong></p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
