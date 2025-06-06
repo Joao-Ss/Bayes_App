@@ -1,5 +1,7 @@
 
-# Projeto com Teorema de Bayes
+# 📈 Projeto com Teorema de Bayes
+
+Aplicação web em Python (Flask) que calcula probabilidades usando o Teorema de Bayes e distribuição binomial para provas de múltipla escolha. Permite informar a chance de acerto, número de questões e visualizar as probabilidades diretamente no navegador.
 
 ## 📌 Descrição
 
@@ -25,7 +27,9 @@ Tudo isso de forma interativa, via navegador, com resultados exibidos diretament
 - Distribuição Binomial
 - Servidor web local com Flask
 
-## Como rodar o projeto:
+## 💻 Explicando o código
+
+## 💡 Como rodar o projeto:
 
 1. Abra o terminal ou prompt de comando.
 
@@ -45,7 +49,9 @@ No Windows:
     pip install -r requirements.txt
 ```
 5. Rode a aplicação:
+```bash
     python app.py
+```
 
 6. Abra o navegador e acesse:
     http://127.0.0.1:5000/
